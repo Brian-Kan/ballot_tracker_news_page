@@ -27,7 +27,7 @@ html {
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
 	letter-spacing: 0.1rem;	
-	line-height: 1.5;
+    line-height: 1.5;
 }
 
 .wrapper {
@@ -40,36 +40,188 @@ img {
     width: 100%;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
+/* Styling for "New" articles - simply add the "new_article" class to the element */
+
+.new_article {
+    position: relative;
+}
+
+.new_article::after {
+    content: "New";
+    color: red;
+    height: 2px;
+    background-color: red;
+    width: 8rem;
+    position: absolute;
+    left: auto;
+    bottom: -2px;
+    display: block;
+}
+
+
+/* Styling for "Updated" articles - simply add the "updated_article" class to the element */
+
+.updated_article {
+    position: relative;
+}
+
+.updated_article::after {
+    content: "Updated";
+    color: dodgerblue;
+    height: 2px;
+    background-color: dodgerblue;
+    width: 8rem;
+    position: absolute;
+    left: auto;
+    bottom: -2px;
+    display: block;
+}
 
 /* =============================================== */
 /* Navigation */
 /* =============================================== */
 
+header {    
+    border-bottom: 2px solid dodgerblue;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav,
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.header_nav {
+    align-items: flex-end;
+}
+
+.footer_nav {
+    /* display: none; */
+    /* width: 100px; */
 }
 
 .social_media_icons {
     display: flex;
-
+    justify-content: space-between;
+    width: 100px;
+}
+.social_media_icons ul {
+    width: 15px;
 }
 
+.ctv_link {
+    color: dodgerblue;
+}
 
 
 /* =============================================== */
 /* Ballot Tracker */
 /* =============================================== */
+.daily_ballot_title {
+    text-align: center;
+}
 
 .polls {
     display: flex;
     justify-content: space-around;
+    text-transform: uppercase;
+}
+
+.polls ul {
+    width: 100%;
+}
+
+.current_standings {
+    display: flex;
+}
+
+.lib_bar {
+    background-color:darkred;
+    width: 70px;
+}
+
+.con_bar {
+    background-color:darkblue;
+    width: 50px;
+}
+
+.ndp_bar {
+    background-color:orange;
+    width: 40px;
+}
+
+.green_bar {
+    background-color:green;
+    width: 20px;
+}
+
+.bq_bar {
+    background-color:teal;
+    width: 20px;
+}
+
+.ppc_bar {
+    background-color:blue;
+    width: 10px;
+}
+
+.party_name span {
+    font-weight: bold;
+}
+
+/* ******* Ballot Animation ******* */
+
+.ballot_bar {
+    height: 15px;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-name: ballot_count;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ballot_count {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    
+    100% {
+        opacity: 1;      
+        width: 1;
+    }
+}
+
+.party_name {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: ballot_count;
+    animation-fill-mode: forwards;
+}
+
+@keyframes party_name {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* =============================================== */
 /* Articles */
 /* =============================================== */
-
 
 .news_articles {
     margin-top: 50px;
@@ -78,15 +230,21 @@ img {
 }
 
 .full_coverage {    
+    position: relative;
     width: 60%;
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
 
 .full_coverage h2 {
     position: absolute;
     top: -30px;
+    padding-left: 10px;
+}
+
+.article_margin {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 2px solid lightgrey;
 }
 
 /* ******* Main article ******* */
@@ -104,14 +262,25 @@ img {
     padding-left: 10px;
 }
 
+.main_article_title {
+    margin: 10px 0px;
+}
+
 /* ******* Secondary articles ******* */
 
 .additional_coverage {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 
 .image_article_pair {
-    background-color: grey;
+    background-color: lightgrey;
+}
+
+.image_article_pair p {
+    margin: 0px 5px 10px 5px;
 }
 
 /* ******* Recent coverage ******* */

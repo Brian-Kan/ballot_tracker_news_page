@@ -7,128 +7,160 @@
     <link rel="stylesheet" href="./style.css">
     <title>Bell Media - CTV News</title>
 </head>
-<body>
-    <!-- Header Starts -->
-    <header>
-        <!-- <h1>Canadian politics</h1> -->
-        <div class="wrapper navigation">
-            <p>CTV News</p>
-            <div>
-                <p>Follow on</p>
-                <nav class="social_media_icons">
-                    <ul><img src="./assets/icons/social_media/social-facebook_@2x.png" alt="Facebook icon"></ul>
-                    <ul><img src="./assets/icons/social_media/Social_twitter_@2xpng.png" alt="Twitter icon"></ul>
-                    <ul><img src="./assets/icons/social_media/instagram_@2x.png" alt="Instagram icon"></ul>
-                    <ul><img src="./assets/icons/social_media/social_youtube_@2x.png" alt="Youtube icon"></ul>
-                </nav>
+    <body>
+        <!-- Header Starts -->
+        <header>
+            <!-- <h1>Canadian politics</h1> -->
+            <div class="wrapper navigation">
+                <p class="ctv_link"><i class="fas fa-angle-left"></i>CTV News</p>
+                <div class="header_nav">
+                    <p>Follow on</p>
+                    <nav class="social_media_icons">
+                        <ul><img src="./assets/icons/social_media/social-facebook_@2x.png" alt="Facebook icon"></ul>
+                        <ul><img src="./assets/icons/social_media/Social_twitter_@2xpng.png" alt="Twitter icon"></ul>
+                        <ul><img src="./assets/icons/social_media/instagram_@2x.png" alt="Instagram icon"></ul>
+                        <ul><img src="./assets/icons/social_media/social_youtube_@2x.png" alt="Youtube icon"></ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </header>
-    <!-- Header Ends -->
+        </header>
+        <!-- Header Ends -->
 
-    <!-- Main Starts -->
-    <main>
-        <!-- Poll Section Starts -->
-        <section class="wrapper">
-            <h2>Nanos daily ballot tracking</h2>
-            <nav class="polls">
-                <ul>
-                    <div>red bar div</div>
-                    <p>Lib</p>
-                </ul>
-                <ul>
-                    <div>navy bar div</div>
-                    <p>Con</p>
-                </ul>
-                <ul>
-                    <div>orange bar div</div>
-                    <p>Ndp</p>
-                </ul>
-                <ul>
-                    <div>green bar div</div>
-                    <p>Grn</p>
-                </ul>
-                <ul>
-                    <div>teal bar div</div>
-                    <p>Bq</p>
-                </ul>
-                <ul>
-                    <div>blue bar div</div>
-                    <p>Ppc</p>
-                </ul>
-            </nav>
-        </section>
-        <!-- Poll Section Ends -->
+        <!-- Main Starts -->
+        <main>
+            <!-- Poll Section Starts -->
+            <section class="wrapper">
+                <h2 class="daily_ballot_title">Nanos daily ballot tracking</h2>
+                <nav class="polls">
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar lib_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_up_@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Lib <span>34%</span></p>
+                    </ul>
 
-        <!-- Article Section Starts -->
-        <section class="wrapper news_articles">
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar con_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_down@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Con <span>26%</span></p>
+                    </ul>
 
-            <div class="full_coverage">
-                <!-- Column 1 -->
-                <h2>Full coverage - Wernick retires</h2>
-                <div class="main_coverage">
-                    <div>
-                        <div><img src="./assets/images/2x/wernick.png" alt="Wernick making a facial expression."></div>
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar ndp_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_up_@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Ndp <span>19%</span></p>
+                    </ul>
+
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar green_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_down@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Grn <span>7%</span></p>
+                    </ul>
+
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar bq_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_up_@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Bq <span>7%</span></p>
+                    </ul>
+
+                    <ul>
+                        <div class="current_standings">
+                            <div class="ballot_bar ppc_bar"></div>
+                            <div><img src="./assets/icons/arrow/arrow_down@2x.png" alt=""></div>
+                            <p>0</p>
+                        </div>
+                        <p class="party_name">Ppc <span>2%</span></p>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Poll Section Ends -->
+
+            <!-- Article Section Starts -->
+            <section class="wrapper news_articles">
+
+                <div class="full_coverage">
+                    <h2>Full coverage - Wernick retires</h2>
+                    <!-- Column 1 -->
+                    <div class="main_coverage">
                         <div>
-                            <h3>Pharetra convallis posuere morbi leo urna molestie at elementum dolar eu.</h3>
-                            <p>Ornare lectus sit amet est. Porta nibh venenatis cras sed felis eget velit aliquet. Massa id neque aliquam vestibulum morbi blandit.</p>
+                            <div><img src="./assets/images/2x/wernick.png" alt="Wernick making a facial expression."></div>
+                            <div>
+                                <h3 class="main_article_title">Pharetra convallis posuere morbi leo urna molestie at elementum dolar eu.</h3>
+                                <p>Ornare lectus sit amet est. Porta nibh venenatis cras sed felis eget velit aliquet. Massa id neque aliquam vestibulum morbi blandit.</p>
+                            </div>
                         </div>
                     </div>
+        
+                    <!-- Column 2 -->
+                    <div class="additional_coverage">
+                        <div class="image_article_pair">
+                            <div><img src="./assets/images/2x/council.png" alt="Council members debate."></div>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
+                        </div>
+                        <div class="article_margin new_article">
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
+                        </div>
+                        <div class="article_margin">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                        </div>
+                    </div>
+
                 </div>
-    
-                <!-- Column 2 -->
-                <div class="additional_coverage">
-                    <div class="image_article_pair">
-                        <div><img src="./assets/images/2x/council.png" alt="Council members debate."></div>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
+
+                <!-- Column 3 -->
+                <div class="recent_coverage">
+                    <h2>Most recent</h2>
+                    <div>
+                        <div><img src="./assets/images/2x/ndp.png" alt="NDP member making a statement."></div>
+                        <p class="article_margin">Excepteur sint occaecat cupidatat non proident</p>
+                    </div>
+                    <div class="article_margin updated_article">
+                        <p>Ut enim ad miim veniam, quis nostrud</p>
+                    </div>
+                    <div class="article_margin">
+                        <p>Fermentum dui faucibus in ornare quam. Pharetra convallis posuere molestie at elementum eu.</p>
+                    </div>
+                    <div class="article_margin new_article">
+                        <p>Nisi vitae suscipit tellus mauris a diam. Ut aliquam purus sit amet luctus</p>
                     </div>
                     <div>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</p>
-                    </div>
-                    <div>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                        <p>Excepteur sint accaecat cupidatat non proident</p>
                     </div>
                 </div>
+            </section>
+            <!-- Article Section Ends -->
+        </main>
+        <!-- Main Ends -->
 
-            </div>
-
-            <!-- Column 3 -->
-            <div class="recent_coverage">
-                <h2>Most recent</h2>
-                <div>
-                    <div><img src="./assets/images/2x/ndp.png" alt="NDP member making a statement."></div>
-                    <p>Excepteur sint occaecat cupidatat non proident</p>
-                </div>
-                <div>
-                    <p>Ut enim ad miim veniam, quis nostrud</p>
-                </div>
-                <div>
-                    <p>Fermentum dui faucibus in ornare quam. Pharetra convallis posuere molestie at elementum eu.</p>
-                </div>
-                <div>
-                    <p>Nisi vitae suscipit tellus mauris a diam. Ut aliquam purus sit amet luctus</p>
-                </div>
-                <div>
-                    <p>Excepteur sint accaecat cupidatat non proident</p>
+        <!-- Footer Starts -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer_nav">
+                    <p>Follow on</p>
+                    <nav class="social_media_icons">
+                        <ul><img src="./assets/icons/social_media/social-facebook_@2x.png" alt="Facebook icon"></ul>
+                        <ul><img src="./assets/icons/social_media/Social_twitter_@2xpng.png" alt="Twitter icon"></ul>
+                        <ul><img src="./assets/icons/social_media/instagram_@2x.png" alt="Instagram icon"></ul>
+                        <ul><img src="./assets/icons/social_media/social_youtube_@2x.png" alt="Youtube icon"></ul>
+                    </nav>
                 </div>
             </div>
-        </section>
-        <!-- Article Section Ends -->
-    </main>
-    <!-- Main Ends -->
-
-    <!-- Footer Starts -->
-    <footer>
-        <div class="wrapper">
-            <p>Follow on</p>
-            <nav class="social_media_icons">
-                <ul><img src="./assets/icons/social_media/social-facebook_@2x.png" alt="Facebook icon"></ul>
-                <ul><img src="./assets/icons/social_media/Social_twitter_@2xpng.png" alt="Twitter icon"></ul>
-                <ul><img src="./assets/icons/social_media/instagram_@2x.png" alt="Instagram icon"></ul>
-                <ul><img src="./assets/icons/social_media/social_youtube_@2x.png" alt="Youtube icon"></ul>
-            </nav>
-        </div>
-    </footer>
-    <!-- Footer Ends -->
-</body>
+        </footer>
+        <!-- Footer Ends -->
+        <script src="https://kit.fontawesome.com/185e5ce9d4.js" crossorigin="anonymous"></script>
+    </body>
 </html>
