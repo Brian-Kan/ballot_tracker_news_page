@@ -157,6 +157,11 @@ header {
     color: dodgerblue;
 }
 
+/* Mobile is off */
+.social_media_mobile {
+    display: none;
+}
+
 /* =============================================== */
 /* Ballot Tracker */
 /* =============================================== */
@@ -227,8 +232,13 @@ header {
     width: 10px;
 }
 
-.party_name span {
+.party_name span,
+.party_ballot_percent {
     font-weight: bold;
+}
+
+.ballot_indicator_mobile {
+    display: none;
 }
 
 /* ******* Ballot Animation ******* */
@@ -353,16 +363,20 @@ header {
     position: relative;
 }
 
-.recent_coverage h2 {
+.desktop_h2 {
     position: absolute;
     top: -30px;
+}
+
+.mobile_h2 {
+    display: none;
 }
 
 
 /* =============================================== */
 /* Media Queries */
 /* =============================================== */
-@media (max-width: 320px) {
+@media (max-width: 1000px) {
 
     /* ------ General ------ */
     .wrapper {
@@ -376,6 +390,16 @@ header {
 	
     .footer_nav {
         display: flex;
+    }
+
+    /* Mobile is on */
+    .social_media_mobile {
+        display: flex;
+    }
+
+    /* Desktop is off */
+    .social_media_desktop {
+        display: none;
     }
 
     /* ------ Ballot Tracker ------ */
@@ -398,6 +422,14 @@ header {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+    }
+
+    .ballot_indicator_desktop {
+        display: none;
+    }
+
+    .ballot_indicator_mobile {
+        display: block;
     }
 
     /* ------ Articles ------ */
@@ -432,6 +464,25 @@ header {
     .recent_coverage h2 {
         position: static;
         margin-top: 10px;
+    }
+
+    .desktop_h2 {
+    position: absolute;
+    top: -30px;
+    }
+
+    .mobile_h2 {
+        display: none;
+    }
+
+    .desktop_h2 {
+        display: none;
+    }
+
+    .mobile_h2 {
+        position: absolute;
+        top: -30px;
+        display: block;
     }
 
 }

@@ -1,3 +1,5 @@
+
+
 // Hover affect for the "Watch Now"
 
 $(".watch_now").hover(function(){
@@ -10,3 +12,5 @@ $(".watch_now").hover(function(){
         $(".watch_text").css("color", "grey");
     }
 );
+
+
