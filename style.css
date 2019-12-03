@@ -157,13 +157,27 @@ header {
     color: dodgerblue;
 }
 
-
 /* =============================================== */
 /* Ballot Tracker */
 /* =============================================== */
+.daily_ballot {
+    margin-top: 20px;
+    padding: 20px 0px 20px 0px;
+    background-color: #ecf0f1;
+    position: relative;
+}
+
 .daily_ballot_title {
     text-align: center;
+    margin-bottom: 20px;
 }
+
+.ballot_date {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
 
 .polls {
     display: flex;
@@ -177,6 +191,10 @@ header {
 
 .current_standings {
     display: flex;
+}
+
+.current_standings img{
+    width: 10px;
 }
 
 .lib_bar {
@@ -216,6 +234,7 @@ header {
 /* ******* Ballot Animation ******* */
 
 .ballot_bar {
+    border-radius: 5px;
     height: 15px;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -280,6 +299,10 @@ header {
     border-bottom: 2px solid lightgrey;
 }
 
+.recent_coverage:nth-of-type(2) {
+    padding-top: 0;
+}
+
 /* ******* Main article ******* */
 
 .main_coverage,
@@ -335,3 +358,80 @@ header {
     top: -30px;
 }
 
+
+/* =============================================== */
+/* Media Queries */
+/* =============================================== */
+@media (max-width: 320px) {
+
+    /* ------ General ------ */
+    .wrapper {
+        width: 90%;
+    }
+
+    /* ------ Navigation ------ */
+    .header_nav {
+        display: none;
+    }
+	
+    .footer_nav {
+        display: flex;
+    }
+
+    /* ------ Ballot Tracker ------ */
+    .daily_ballot_title {
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+        text-align: initial;
+    }
+
+    .ballot_date {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .polls {
+        flex-direction: column;
+    }
+
+    .polls li {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    /* ------ Articles ------ */
+    .news_articles {
+        flex-direction: column;
+    }
+
+    .full_coverage {
+        flex-direction: column;
+    }
+
+    .main_coverage {
+        border: 0px;
+    }
+
+    .full_coverage,
+    .main_coverage,
+    .additional_coverage,
+    .recent_coverage {
+        width: 100%;
+    }
+
+    .full_coverage h2,
+    .main_coverage {
+        padding-left: 0;
+    }
+
+    .full_coverage h2 {
+        font-size: 13px;
+    }
+
+    .recent_coverage h2 {
+        position: static;
+        margin-top: 10px;
+    }
+
+}
