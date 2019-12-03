@@ -36,6 +36,10 @@ html {
 	margin: 0 auto;
 }
 
+ul {
+	list-style-type: none;	
+}
+
 img {
     width: 100%;
 }
@@ -48,6 +52,7 @@ h2 {
 
 .new_article {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .new_article::after {
@@ -55,7 +60,7 @@ h2 {
     color: red;
     height: 2px;
     background-color: red;
-    width: 8rem;
+    width: 5rem;
     position: absolute;
     left: auto;
     bottom: -2px;
@@ -67,6 +72,7 @@ h2 {
 
 .updated_article {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .updated_article::after {
@@ -74,11 +80,39 @@ h2 {
     color: dodgerblue;
     height: 2px;
     background-color: dodgerblue;
-    width: 8rem;
+    width: 5rem;
     position: absolute;
     left: auto;
     bottom: -2px;
     display: block;
+}
+
+/* Styling for "Watch Now" - add the "watch_now" class to the parent div and the "play_line", "play_button" and "watch_text" classes to their respective elements. */
+.watch_now {
+    display: flex;
+    align-items: center;
+}
+
+.play_line,
+.play_button,
+.watch_text {
+    display: inline-block;
+}
+
+.play_line {
+    height: 2px;
+    width: 200px;
+    background-color: grey;
+}
+
+.play_button {
+    width: 10px;
+}
+
+.watch_text {
+    text-transform: capitalize;
+    color: grey;
+    font-weight: bold;
 }
 
 /* =============================================== */
@@ -107,8 +141,7 @@ header {
 }
 
 .footer_nav {
-    /* display: none; */
-    /* width: 100px; */
+    display: none;
 }
 
 .social_media_icons {
@@ -116,7 +149,7 @@ header {
     justify-content: space-between;
     width: 100px;
 }
-.social_media_icons ul {
+.social_media_icons li {
     width: 15px;
 }
 
@@ -231,7 +264,7 @@ header {
 
 .full_coverage {    
     position: relative;
-    width: 60%;
+    width: 66%;
     display: flex;
     justify-content: space-between;
 }
@@ -242,7 +275,7 @@ header {
     padding-left: 10px;
 }
 
-.article_margin {
+.article_spacing {
     padding: 10px 0px 10px 0px;
     border-bottom: 2px solid lightgrey;
 }
@@ -257,7 +290,7 @@ header {
 }
 
 .main_coverage {
-    width: 60%;
+    width: 66%;
     border-left: 2px solid grey;
     padding-left: 10px;
 }
@@ -269,10 +302,9 @@ header {
 /* ******* Secondary articles ******* */
 
 .additional_coverage {
-    width: 30%;
+    width: 32%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .image_article_pair {
@@ -283,10 +315,14 @@ header {
     margin: 0px 5px 10px 5px;
 }
 
+.additional_coverage div:last-child {
+    border-bottom: none;
+}
+
 /* ******* Recent coverage ******* */
 
 .recent_coverage {    
-    width: 30%;
+    width: 33%;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
