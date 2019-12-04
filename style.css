@@ -48,7 +48,7 @@ h2 {
     text-transform: uppercase;
 }
 
-/* Styling for "New" articles - simply add the "new_article" class to the element */
+/* Styling for "New" articles - simply add the "new_article" class to the HTML element to receive the proper stylings. */
 
 .new_article {
     position: relative;
@@ -68,7 +68,7 @@ h2 {
 }
 
 
-/* Styling for "Updated" articles - simply add the "updated_article" class to the element */
+/* Styling for "Updated" articles - simply add the "updated_article" class to the HTML element to receive the proper stylings.*/
 
 .updated_article {
     position: relative;
@@ -87,7 +87,7 @@ h2 {
     display: block;
 }
 
-/* Styling for "Watch Now" - add the "watch_now" class to the parent div and the "play_line", "play_button" and "watch_text" classes to their respective elements. */
+/* Styling for "Watch Now" - In the HTML, add the "watch_now" class to the parent div and the "play_line", "play_button" and "watch_text" classes to their respective child elements to receive the proper stylings. */
 .watch_now {
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ header {
     color: dodgerblue;
 }
 
-/* Mobile is off */
+/* Mobile version is off.  When the breakpoint is reached, this will be turned on. */
 .social_media_mobile {
     display: none;
 }
@@ -183,7 +183,6 @@ header {
     right: 10px;
 }
 
-
 .polls {
     display: flex;
     justify-content: space-around;
@@ -202,6 +201,16 @@ header {
     width: 10px;
 }
 
+.grouping_name_percent {
+    display: flex;
+}
+
+.party_ballot_percent {
+    text-align:center;
+    width: 30px;
+}
+
+/* ====== These are just for the coloured bars ====== */
 .lib_bar {
     background-color:darkred;
     width: 70px;
@@ -232,7 +241,6 @@ header {
     width: 10px;
 }
 
-.party_name span,
 .party_ballot_percent {
     font-weight: bold;
 }
@@ -242,6 +250,7 @@ header {
 }
 
 /* ******* Ballot Animation ******* */
+/* This is to set the fade-in animation for both the bar and the party name. */
 
 .ballot_bar {
     border-radius: 5px;
@@ -264,7 +273,7 @@ header {
     }
 }
 
-.party_name {
+.grouping_name_percent {
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-name: ballot_count;
@@ -432,6 +441,11 @@ header {
         display: block;
     }
 
+    .grouping_name_percent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* ------ Articles ------ */
     .news_articles {
         flex-direction: column;
@@ -485,4 +499,12 @@ header {
         display: block;
     }
 
+}
+
+/* I added this as the H2 was just a little too big at 320 and too small for the larger sizes. */
+@media (max-width: 330px) {
+    /* Articles */
+    .full_coverage h2 {
+        font-size: 12px;
+    }
 }

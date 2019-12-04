@@ -1,0 +1,13 @@
+NOTES
+
+When trying to be responsive, the browser seems to stick and I have to refresh it to see it properly.
+
+As mentioned in a previous email, I did have trouble with some of the stylings.
+
+Particularly the partial "ticks" or lines for the border and the "vertical tick" for the "Watch Now" feature.
+
+I also had some minor trouble with the ballot updates.
+
+Mostly everything else seemed to be in place.
+
+I tried to add notes where possible but it was mostly styling various elements to look right.
